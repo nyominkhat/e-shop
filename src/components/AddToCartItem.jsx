@@ -1,17 +1,28 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { GrClose } from "react-icons/gr";
-import { motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
+
+import { numberFormat } from "../utils";
 import { Context } from "../App";
 
-const AddToCartItem = ({ item, index }) => {
+const AddToCartItem = React.memo(({ item, index }) => {
   const { totalPrice, setTotalPrice, quentity, setQuentity, handleRemove } =
     useContext(Context);
 
   const { title, image, price } = item.attributes;
-  const [amount, setAmount] = useState(1);
+  const [amount, setAmount] = useState(
+    localStorage.getItem(title) ? parseInt(localStorage.getItem(title)) : 1
+  );
   const url = image.data.attributes.formats.thumbnail.url;
-  // console.log("amount", amount);
-  // console.log(amount);
+  // console.log(quentity);
+  // console.log(title, amount);
+  useEffect(() => {
+    if (quentity === 0 || amount === 1) {
+      localStorage.removeItem(title);
+    }
+
+    localStorage.setItem(title, amount);
+  }, [amount, title]);
 
   return (
     <motion.div
@@ -20,7 +31,7 @@ const AddToCartItem = ({ item, index }) => {
       animate={{ opacity: 1, x: 0 }}
       transition={{
         duration: 0.5,
-        delay: 0.2 * index,
+        delay: 0.09 * index,
         type: "spring",
         bounce: 0.4,
       }}
@@ -30,7 +41,7 @@ const AddToCartItem = ({ item, index }) => {
         <img className="bg-white w-12 h-12 rounded-sm" src={url} alt={title} />
         <div className="flex flex-col overflow-hidden">
           <h4 className="text-sm font-semibold truncate">{title}</h4>
-          <span className="text-xs text-tan">Ks {price}</span>
+          <span className="text-xs text-tan">Ks {numberFormat(price)}</span>
         </div>
       </div>
 
@@ -42,7 +53,6 @@ const AddToCartItem = ({ item, index }) => {
                 handleRemove(item.id);
                 setQuentity(quentity - 1);
                 setTotalPrice(totalPrice - price);
-                return;
               } else {
                 setTotalPrice(totalPrice - price);
                 setQuentity(quentity - 1);
@@ -56,7 +66,7 @@ const AddToCartItem = ({ item, index }) => {
           <span className="text-xs">{amount}</span>
           <button
             onClick={() => {
-              if (quentity == 0 && amount === 1) {
+              if (quentity === 0 && amount === 1) {
                 setQuentity(quentity + 1);
                 setTotalPrice(totalPrice + price);
                 setAmount(1);
@@ -77,6 +87,7 @@ const AddToCartItem = ({ item, index }) => {
             handleRemove(item.id);
             setQuentity(quentity - amount);
             setTotalPrice(totalPrice - price * amount);
+            localStorage.removeItem(title);
           }}
         >
           <GrClose size={12} />
@@ -84,6 +95,6 @@ const AddToCartItem = ({ item, index }) => {
       </div>
     </motion.div>
   );
-};
+});
 
 export default AddToCartItem;

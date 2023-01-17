@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
 
+import { numberFormat } from "../utils";
 import { Context } from "../App";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -59,7 +60,9 @@ const ProductCard = ({ product, category, discont = "0", index }) => {
           <span className="text-sm truncate text-gray">{title}</span>
         </p>
         <span className="flex items-center justify-between relative">
-          <small className="text-xs text-secondary">Ks {price}.00</small>
+          <small className="text-xs text-secondary">
+            Ks {numberFormat(price)}.00
+          </small>
 
           <button
             onClick={() => handleAdd(product)}

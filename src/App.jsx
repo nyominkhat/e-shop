@@ -37,6 +37,10 @@ function App() {
   // console.log("length", isAdded);
 
   useEffect(() => {
+    if (quentity === 0) {
+      localStorage.clear();
+    }
+
     setTimeout(() => {
       setIsAdded(false);
     }, 4000);

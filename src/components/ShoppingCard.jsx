@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import { Context } from "../App";
 import AddToCartItem from "./AddToCartItem";
+import { numberFormat } from "../utils";
 
 const ShoppingCard = () => {
-  const { quentity, cartProduct,  totalPrice } =
-    useContext(Context);
+  const { quentity, cartProduct, totalPrice } = useContext(Context);
 
   return (
     <motion.aside
@@ -16,7 +16,7 @@ const ShoppingCard = () => {
       }}
       className="fixed right-[10%] top-[10.2vh] text-charcoal w-1/5 z-[49] bg-white p-5 flex flex-col gap-2 shadow-2xl rounded-md "
     >
-      <div className="max-h-[50vh] overflow-auto overflow-x-hidden">
+      <div className="max-h-[40vh] overflow-auto overflow-x-hidden">
         {cartProduct.map((item, index) => {
           // console.log("item", item);
           return <AddToCartItem key={item.id} item={item} index={index} />;
@@ -31,7 +31,7 @@ const ShoppingCard = () => {
       <div className="flex items-center justify-between px-4">
         <p className="text-sm">Total</p>
         <span className="text-sm font-semibold text-tan">
-          Ks {totalPrice}.00
+          Ks {numberFormat(totalPrice)}.00
         </span>
       </div>
 

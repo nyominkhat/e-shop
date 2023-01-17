@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { Context } from "../App";
-import Logo from "../../public/images/logo.svg";
+import Logo from "/images/logo.svg";
 
 let activeLink = {
   color: "#B68D40",
@@ -47,17 +47,18 @@ const NavBar = ({ amount }) => {
 
         {/* over small device */}
         <ul className="items-center justify-between hidden w-full gap-4 p-4 font-semibold md:px-8 lg:px-12 xl:px-16 2xl:px-20 sm:flex">
-          <li className="flex items-center justify-between gap-6 ">
+          <li>
             <NavLink to="/">
               <img src={Logo} alt="logo" />
             </NavLink>
           </li>
-          <ul className="flex gap-6 pr-0 mr-0 2xl:mr-96 2xl:pr-96 xl:mr-60 xl:pr-60 lg:mr-40 lg:pr-40">
+
+          <ul className="flex items-center gap-6 2xl:mr-72 2xl:pr-96 xl:mr-60 xl:pr-60 lg:mr-40 lg:pr-40">
             <li>
               <NavLink
                 to="/"
                 style={({ isActive }) => (isActive ? activeLink : null)}
-                className="px-4 py-2"
+                className="px-4 py-2 "
               >
                 Home
               </NavLink>
@@ -84,12 +85,13 @@ const NavBar = ({ amount }) => {
               <NavLink
                 to="/contactus"
                 style={({ isActive }) => (isActive ? activeLink : null)}
-                className="px-4 py-2"
+                className="px-2 py-2"
               >
                 Contact Us
               </NavLink>
             </li>
           </ul>
+
           <li
             onClick={() => setIsShown(!isShown)}
             className="flex justify-end gap-1 w-fit relative p-1"
@@ -97,14 +99,21 @@ const NavBar = ({ amount }) => {
             <span className="text-xl cursor-pointer hover:text-tan transition duration-200 ease-out">
               <BsFillHandbagFill />
             </span>
-            <motion.span
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.5 }}
-              className="absolute bg-gold p-1 -top-3 -right-3 rounded-full py-0 px-1.5 text-sm select-none"
-            >
-              <span>{amount === 0 ? undefined : amount}</span>
-            </motion.span>
+
+            {amount === 0 ? null : (
+              <motion.span
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  type: "spring",
+                  bounce: 0.6,
+                }}
+                className="absolute bg-gold -top-3 -right-3 rounded-full py-0 px-1.5 text-sm select-none"
+              >
+                {amount}
+              </motion.span>
+            )}
           </li>
         </ul>
       </div>

@@ -9,10 +9,10 @@ const Hero = () => {
     >
       <div className=" text-charcoal lg:w-full w-auto  flex items-center">
         <div className="lg:pl-20 lg:text-left text-center">
-          <h1 className=" lg:text-6xl md:text-5xl sm:text-4xl text-3xl  font-bold">
+          <h1 className=" lg:text-7xl md:text-5xl sm:text-4xl text-3xl  font-bold">
             Find the best for you
           </h1>
-          <p className="my-4 md:my-2 text-base">
+          <p className="my-4 md:my-2 text-base text-gray">
             Explore and buy anything you want
             <br />
             in one place.

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import { Context } from "../App";
 import useAllProducts from "../hooks/useAllProducts";
+import { numberFormat } from "../utils";
 
 const ProductDetail = () => {
   const { handleAdd } = useContext(Context);
@@ -69,7 +70,9 @@ const ProductDetail = () => {
             className="absolute right-0 w-1/2 top-[20%] p-1"
           >
             <h2 className="font-bold text-2xl mb-4">{title}</h2>
-            <span className="text-lg font-bold text-gray">Ks {price}.00</span>
+            <span className="text-lg font-bold text-gray">
+              Ks {numberFormat(price)}.00
+            </span>
             <p className="flex text-sm mt-4 mb-4">{description}</p>
             <button
               onClick={() => handleAdd(sluggedProduct)}
