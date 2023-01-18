@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import NewArrivals from "../components/NewArrivals";
 import ServiceWrapper from "../components/ServiceWrapper";
+import Banner from "../components/Banner";
 
 const Home = () => {
   return (
@@ -25,6 +26,10 @@ const Home = () => {
       <hr className="w-4/5 mx-auto my-10 border shadow-md text-heather" />
 
       <Categories />
+
+      <hr className="w-4/5 mx-auto my-10 border shadow-md text-heather" />
+
+      <Banner />
 
       <hr className="w-4/5 mx-auto my-10 border shadow-md text-heather" />
 
