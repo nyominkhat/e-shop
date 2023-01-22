@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { BsFillHandbagFill, BsListNested } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { AiOutlineClose } from "react-icons/ai";
 
 import { Context } from "../App";
 import Logo from "/images/logo.svg";
@@ -11,7 +12,7 @@ let activeLink = {
 };
 
 const NavBar = ({ amount }) => {
-  const { isShown, setIsShown } = useContext(Context);
+  const { isShown, setIsShown, isOpen, setIsOpen } = useContext(Context);
 
   return (
     <nav className="sticky top-0 right-[10vw] z-50">
@@ -19,7 +20,10 @@ const NavBar = ({ amount }) => {
         {/* small device */}
         <ul className="flex items-center justify-between w-full p-4 sm:hidden">
           <li className="w-1/3">
-            <span className="text-2xl menu">
+            <span
+              onClick={() => setIsOpen(true)}
+              className="text-2xl menu cursor-pointer"
+            >
               <BsListNested />
             </span>
           </li>
@@ -117,6 +121,63 @@ const NavBar = ({ amount }) => {
           </li>
         </ul>
       </div>
+
+      {isOpen ? (
+        <motion.aside
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{
+            duration: 1,
+            type: "spring",
+            bounce: 0.6,
+          }}
+          className="fixed sm:hidden top-0 -left-10 z-50 text-charcoal w-[90vw] h-[100vh] bg-white"
+        >
+          <span className="min-h-[10vh] border-b-[1px] border-secondary flex justify-end items-center pr-2">
+            <span
+              className="cursor-pointer p-4 border rounded-full border-secondary"
+              onClick={() => setIsOpen(false)}
+            >
+              <AiOutlineClose />
+            </span>
+          </span>
+
+          <ul className="flex flex-col p-4 pl-20 gap-6">
+            <li onClick={() => setIsOpen(false)}>
+              <NavLink
+                to="/"
+                style={({ isActive }) => (isActive ? activeLink : null)}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li onClick={() => setIsOpen(false)}>
+              <NavLink
+                style={({ isActive }) => (isActive ? activeLink : null)}
+                to="/products"
+              >
+                Products
+              </NavLink>
+            </li>
+            <li onClick={() => setIsOpen(false)}>
+              <NavLink
+                to="/about"
+                style={({ isActive }) => (isActive ? activeLink : null)}
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li onClick={() => setIsOpen(false)}>
+              <NavLink
+                to="/contactus"
+                style={({ isActive }) => (isActive ? activeLink : null)}
+              >
+                Contact Us
+              </NavLink>
+            </li>
+          </ul>
+        </motion.aside>
+      ) : null}
     </nav>
   );
 };

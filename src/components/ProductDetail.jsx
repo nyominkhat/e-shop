@@ -102,7 +102,12 @@ const ProductDetail = () => {
           <span className="font-bold text-gray">Ks {price}.00</span>
           <p className="flex my-2 text-sm">{description}</p>
           <div className="flex mt-4 items-center justify-between">
-            <button className="btn btn-outline btn-accent">Add To Cart</button>
+            <button
+              onClick={() => handleAdd(sluggedProduct)}
+              className="btn btn-outline btn-accent"
+            >
+              Add To Cart
+            </button>
             <Link className="pr-4" to="/products">
               <TiArrowBack size={25} />
             </Link>

@@ -20,6 +20,7 @@ function App() {
   const [quentity, setQuentity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [isShown, setIsShown] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
   const [cartProduct, setCartProduct] = useState([]);
 
@@ -57,8 +58,6 @@ function App() {
   };
 
   const ContextValue = {
-    isShown,
-    setIsShown,
     quentity,
     setQuentity,
     setCartProduct,
@@ -67,6 +66,10 @@ function App() {
     setTotalPrice,
     handleAdd,
     handleRemove,
+    isShown,
+    setIsShown,
+    isOpen,
+    setIsOpen,
   };
 
   // console.log("run", totalPrice, quentity);
