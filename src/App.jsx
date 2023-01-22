@@ -72,13 +72,17 @@ function App() {
   // console.log("run", totalPrice, quentity);
   // console.log("qtu", productQty);
 
+  // const backgroundStyle = { background: "rgba(0.0.0.2)" };
+
   return (
     <Context.Provider value={ContextValue}>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.3 }}
-        className="container mx-auto relative"
+        className="mx-auto relative"
+        // style={`{${isShown ? background:${"rgba(0.0.0.0.2)"} : null}`}
+        // style={isShown ? backgroundStyle : null}
       >
         <Router>
           <NavBar amount={quentity} />

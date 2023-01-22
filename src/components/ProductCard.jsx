@@ -34,7 +34,7 @@ const ProductCard = ({ product, category, discont = "0", index }) => {
       whileInView={"onScreen"}
       viewport={{ once: true, amount: 0.1 }}
       variants={mediaAnimation}
-      className="p-6  bg-white rounded-lg shadow-2xl w-60 md:h-1/2"
+      className="p-6 bg-white rounded-lg shadow-2xl w-60 "
     >
       <div className="flex items-center justify-center w-48 h-48 p-2 mx-auto mb-3 overflow-hidden border border-dotted border-secondary">
         <div className="transition duration-200 ease-out hover:opacity-80 hover:scale-105">
@@ -51,7 +51,7 @@ const ProductCard = ({ product, category, discont = "0", index }) => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex  flex-col">
         <div className="flex items-center justify-between mb-2">
           <h4 className="font-semibold">{category}</h4>
           <span className="text-xs badge badge-primary">{discont}%off</span>

@@ -22,7 +22,7 @@ const NewArrivals = () => {
   // console.log(firstProduct);
 
   return (
-    <section className="bg-heather container p-4 min-h-[55vh]">
+    <section className="bg-heather  p-4 min-h-[55vh]">
       <h2 className="mt-5 mb-10 text-2xl font-bold text-center lg:text-5xl md:text-4xl sm:text-3xl lg:pl-10 lg:text-left">
         NEW ARRIVALS
       </h2>

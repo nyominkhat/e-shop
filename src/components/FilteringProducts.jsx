@@ -15,9 +15,12 @@ const FilteringProducts = ({ category }) => {
     );
   const products = response.data;
   // console.log("products", products, loading);
-
+  // flex flex-wrap items-center justify-evenly xl:justify-start
   return (
-    <div className="flex flex-wrap items-center justify-evenly  w-[90%] gap-4  px-10 py-4   mx-auto">
+    <div
+      style={{ gridTemplateColumns: "repeat(auto-fit,minmax(15rem , 1fr))" }}
+      className="lg:grid sm:flex sm:justify-evenly flex flex-wrap justify-center w-[85%] gap-10  px-10 py-4  mx-auto"
+    >
       {products.map((product, index) => (
         <ProductCard
           index={index}

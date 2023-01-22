@@ -8,7 +8,7 @@ const Contactus = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="container overflow-hidden bg-white text-charcoal min-h-[90vh]"
+      className="overflow-hidden bg-white text-charcoal min-h-[90vh]"
     >
       <h1 className="text-7xl font-bold text-center mt-12">Contact Us</h1>
 

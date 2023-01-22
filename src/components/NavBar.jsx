@@ -47,13 +47,13 @@ const NavBar = ({ amount }) => {
 
         {/* over small device */}
         <ul className="items-center justify-between hidden w-full gap-4 p-4 font-semibold md:px-8 lg:px-12 xl:px-16 2xl:px-20 sm:flex">
-          <li>
+          <li className="w-[6.5rem] mr-10">
             <NavLink to="/">
-              <img src={Logo} alt="logo" />
+              <img src={Logo} alt="logo" className="w-full" />
             </NavLink>
           </li>
 
-          <ul className="flex items-center gap-6 2xl:mr-72 2xl:pr-96 xl:mr-60 xl:pr-60 lg:mr-40 lg:pr-40">
+          <ul className="flex items-center sm:gap-2 lg:gap-16  grow">
             <li>
               <NavLink
                 to="/"
@@ -94,7 +94,7 @@ const NavBar = ({ amount }) => {
 
           <li
             onClick={() => setIsShown(!isShown)}
-            className="flex justify-end gap-1 w-fit relative p-1"
+            className="flex justify-end gap-1 relative p-1 "
           >
             <span className="text-xl cursor-pointer hover:text-tan transition duration-200 ease-out">
               <BsFillHandbagFill />

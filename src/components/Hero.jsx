@@ -4,7 +4,7 @@ import { Link as ScrollTag } from "react-scroll";
 const Hero = () => {
   return (
     <section
-      className="hero bg-heather container min-h-[70vh]"
+      className="hero bg-heather  min-h-[70vh]"
       style={{ backgroundImage: `url("./images/hero.png")` }}
     >
       <div className=" text-charcoal lg:w-full w-auto  flex items-center">

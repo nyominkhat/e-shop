@@ -15,7 +15,7 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="container overflow-hidden bg-white text-charcoal"
+      className="overflow-hidden bg-white text-charcoal"
     >
       <Hero />
 
