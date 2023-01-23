@@ -3,8 +3,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Banner = () => {
   return (
-    <section className="px-10 min-h-[40vh] flex justify-center items-center gap-1">
-      <div className="cursor-pointer h-96">
+    <section className="xl:min-h-[40vh] w-full flex justify-center items-center gap-1 px-10">
+      <div className="h-40 cursor-pointer xl:h-96 md:h-60">
         <LazyLoadImage
           effect="blur"
           width="100%"
@@ -13,7 +13,7 @@ const Banner = () => {
           src="./images/banner/Professional-E-Commerce-Shoes-Banner-Design.jpg"
         />
       </div>
-      <div className="cursor-pointer h-96">
+      <div className="h-40 cursor-pointer xl:h-96 md:h-60">
         <LazyLoadImage
           effect="blur"
           width="100%"

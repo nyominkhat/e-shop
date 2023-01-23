@@ -9,7 +9,6 @@ import WrapperCard from "./WrapperCard";
 
 const settings = {
   dots: true,
-  infinite: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -57,7 +56,7 @@ const ServiceWrapper = () => {
         <Slider {...settings}>
           {data.map((item, index) => (
             // <span key={index}>{item.cover}</span>
-            <div key={index} className="flex">
+            <div key={index}>
               <div className="mx-auto w-14">
                 <figure className="absolute top-0 p-4 rounded-full shadow-md bg-heather">
                   {item.cover}
