@@ -58,7 +58,7 @@ const ServiceWrapper = () => {
           {data.map((item, index) => (
             // <span key={index}>{item.cover}</span>
             <div key={index} className="flex">
-              <div className="w-20 mx-auto">
+              <div className="mx-auto w-14">
                 <figure className="absolute top-0 p-4 rounded-full shadow-md bg-heather">
                   {item.cover}
                 </figure>
