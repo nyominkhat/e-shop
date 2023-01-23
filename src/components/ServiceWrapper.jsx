@@ -41,7 +41,7 @@ const data = [
 const ServiceWrapper = () => {
   return (
     <>
-      <section className="sm:flex hidden justify-around flex-wrap gap-2">
+      <section className="flex-wrap justify-around hidden gap-2 sm:flex">
         {data.map((item, index) => (
           // <span key={index}>{item.cover}</span>
           <WrapperCard
@@ -58,13 +58,13 @@ const ServiceWrapper = () => {
           {data.map((item, index) => (
             // <span key={index}>{item.cover}</span>
             <div key={index} className="flex">
-              <div className="mx-auto w-20">
-                <figure className="p-4 absolute top-0 rounded-full shadow-md bg-heather">
+              <div className="w-20 mx-auto">
+                <figure className="absolute top-0 p-4 rounded-full shadow-md bg-heather">
                   {item.cover}
                 </figure>
               </div>
 
-              <div className="card-body mt-12 text-center">
+              <div className="mt-12 text-center card-body">
                 <h2 className="text-lg font-semibold">{item.title}</h2>
                 <p className="text-sm">{item.decs}</p>
               </div>

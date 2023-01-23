@@ -51,7 +51,7 @@ const ProductCard = ({ product, category, discont = "0", index }) => {
           </Link>
         </div>
       </div>
-      <div className="flex  flex-col">
+      <div className="flex flex-col">
         <div className="flex items-center justify-between mb-2">
           <h4 className="font-semibold">{category}</h4>
           <span className="text-xs badge badge-primary">{discont}%off</span>
@@ -59,14 +59,14 @@ const ProductCard = ({ product, category, discont = "0", index }) => {
         <p className="flex mb-3">
           <span className="text-sm truncate text-gray">{title}</span>
         </p>
-        <span className="flex items-center justify-between relative">
+        <span className="relative flex items-center justify-between">
           <small className="text-xs text-secondary">
             Ks {numberFormat(price)}.00
           </small>
 
           <button
             onClick={() => handleAdd(product)}
-            className="btn btn-outline btn-secondary h-2 btn-sm"
+            className="h-2 btn btn-outline btn-secondary btn-sm"
           >
             +
           </button>

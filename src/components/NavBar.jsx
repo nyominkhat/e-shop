@@ -22,7 +22,7 @@ const NavBar = ({ amount }) => {
           <li className="w-1/3">
             <span
               onClick={() => setIsOpen(true)}
-              className="text-2xl menu cursor-pointer"
+              className="text-2xl cursor-pointer menu"
             >
               <BsListNested />
             </span>
@@ -57,7 +57,7 @@ const NavBar = ({ amount }) => {
             </NavLink>
           </li>
 
-          <ul className="flex items-center sm:gap-2 lg:gap-16  grow">
+          <ul className="flex items-center sm:gap-2 lg:gap-16 grow">
             <li>
               <NavLink
                 to="/"
@@ -98,9 +98,9 @@ const NavBar = ({ amount }) => {
 
           <li
             onClick={() => setIsShown(!isShown)}
-            className="flex justify-end gap-1 relative p-1 "
+            className="relative flex justify-end gap-1 p-1 "
           >
-            <span className="text-xl cursor-pointer hover:text-tan transition duration-200 ease-out">
+            <span className="text-xl transition duration-200 ease-out cursor-pointer hover:text-tan">
               <BsFillHandbagFill />
             </span>
 
@@ -135,14 +135,14 @@ const NavBar = ({ amount }) => {
         >
           <span className="min-h-[10vh] border-b-[1px] border-secondary flex justify-end items-center pr-2">
             <span
-              className="cursor-pointer p-4 border rounded-full border-secondary"
+              className="p-4 border rounded-full cursor-pointer border-secondary"
               onClick={() => setIsOpen(false)}
             >
               <AiOutlineClose />
             </span>
           </span>
 
-          <ul className="flex flex-col p-4 pl-20 gap-6">
+          <ul className="flex flex-col gap-6 p-4 pl-20">
             <li onClick={() => setIsOpen(false)}>
               <NavLink
                 to="/"

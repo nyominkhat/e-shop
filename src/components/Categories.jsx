@@ -12,8 +12,8 @@ const Categories = () => {
 
       {/* over small device */}
       <div className="h-[80vh] md:grid grid-cols-4 grid-rows-2 gap-2 px-10 hidden">
-        <div className="relative bg-heather overflow-hidden">
-          <div className="h-full hover:scale-105 transition duration-200 ease-out">
+        <div className="relative overflow-hidden bg-heather">
+          <div className="h-full transition duration-200 ease-out hover:scale-105">
             <LazyLoadImage
               effect="blur"
               src="./images/category-imgs/watch.jpg"
@@ -31,8 +31,8 @@ const Categories = () => {
           </div>
         </div>
 
-        <div className="relative bg-heather row-span-2 overflow-hidden">
-          <div className="h-full hover:scale-105 transition duration-200 ease-out">
+        <div className="relative row-span-2 overflow-hidden bg-heather">
+          <div className="h-full transition duration-200 ease-out hover:scale-105">
             <LazyLoadImage
               effect="blur"
               src="./images/category-imgs/loosetee.jpg"
@@ -52,8 +52,8 @@ const Categories = () => {
           </div>
         </div>
 
-        <div className="relative bg-heather overflow-hidden">
-          <div className="h-full hover:scale-105 transition duration-200 ease-out">
+        <div className="relative overflow-hidden bg-heather">
+          <div className="h-full transition duration-200 ease-out hover:scale-105">
             <LazyLoadImage
               effect="blur"
               src="./images/category-imgs/polotee.jpg"
@@ -71,8 +71,8 @@ const Categories = () => {
           </div>
         </div>
 
-        <div className="relative bg-heather overflow-hidden">
-          <div className="h-full hover:scale-105 transition duration-200 ease-out">
+        <div className="relative overflow-hidden bg-heather">
+          <div className="h-full transition duration-200 ease-out hover:scale-105">
             <LazyLoadImage
               effect="blur"
               src="./images/category-imgs/shirt.jpg"
@@ -90,8 +90,8 @@ const Categories = () => {
           </div>
         </div>
 
-        <div className="relative bg-heather overflow-hidden">
-          <div className="h-full hover:scale-105 transition duration-200 ease-out">
+        <div className="relative overflow-hidden bg-heather">
+          <div className="h-full transition duration-200 ease-out hover:scale-105">
             <LazyLoadImage
               effect="blur"
               src="./images/category-imgs/sneaker.jpg"
@@ -109,8 +109,8 @@ const Categories = () => {
           </div>
         </div>
 
-        <div className="relative col-span-2 bg-heather overflow-hidden">
-          <div className="h-full hover:scale-105 transition duration-200 ease-out">
+        <div className="relative col-span-2 overflow-hidden bg-heather">
+          <div className="h-full transition duration-200 ease-out hover:scale-105">
             <LazyLoadImage
               effect="blur"
               src="./images/category-imgs/bag.jpg"

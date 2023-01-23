@@ -35,17 +35,17 @@ const AddToCartItem = React.memo(({ item, index }) => {
         type: "spring",
         bounce: 0.4,
       }}
-      className="bg-heather my-2 rounded-md p-2 px-4 flex items-center justify-between"
+      className="flex items-center justify-between p-2 px-4 my-2 rounded-md bg-heather"
     >
-      <div className="w-1/2 flex items-center gap-2">
-        <img className="bg-white w-12 h-12 rounded-sm" src={url} alt={title} />
+      <div className="flex items-center w-1/2 gap-2">
+        <img className="w-12 h-12 bg-white rounded-sm" src={url} alt={title} />
         <div className="flex flex-col overflow-hidden">
           <h4 className="text-sm font-semibold truncate">{title}</h4>
           <span className="text-xs text-tan">Ks {numberFormat(price)}</span>
         </div>
       </div>
 
-      <div className="cursor-pointer flex items-center gap-3">
+      <div className="flex items-center gap-3 cursor-pointer">
         <div className="flex items-center gap-2">
           <button
             onClick={() => {
@@ -59,7 +59,7 @@ const AddToCartItem = React.memo(({ item, index }) => {
                 setAmount(amount - 1);
               }
             }}
-            className="btn btn-xs btn-outline text-charcoal text-sm btn-secondary"
+            className="text-sm btn btn-xs btn-outline text-charcoal btn-secondary"
           >
             -
           </button>
@@ -76,7 +76,7 @@ const AddToCartItem = React.memo(({ item, index }) => {
                 setAmount(amount + 1);
               }
             }}
-            className="btn btn-xs btn-outline text-charcoal text-sm btn-secondary"
+            className="text-sm btn btn-xs btn-outline text-charcoal btn-secondary"
           >
             +
           </button>

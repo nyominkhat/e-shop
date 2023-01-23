@@ -4,13 +4,13 @@ const WrapperCard = ({ cover, title, decs, index }) => {
   return (
     <section
       id={index}
-      className="card lg:w-80 w-60 md:h-1/2 shadow-2xl bg-white p-3"
+      className="p-3 bg-white shadow-2xl card lg:w-80 w-60 md:h-1/2"
     >
-      <figure className="mx-auto p-4 rounded-full shadow-md bg-heather">
+      <figure className="p-4 mx-auto rounded-full shadow-md bg-heather">
         {cover}
       </figure>
 
-      <div className="card-body text-center">
+      <div className="text-center card-body">
         <h2 className="text-lg font-semibold">{title}</h2>
         <p className="text-sm">{decs}</p>
       </div>
