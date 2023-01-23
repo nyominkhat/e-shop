@@ -9,6 +9,7 @@ import WrapperCard from "./WrapperCard";
 
 const settings = {
   dots: true,
+  Infinity: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
