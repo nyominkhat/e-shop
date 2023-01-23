@@ -43,7 +43,7 @@ const NavBar = ({ amount }) => {
             >
               <BsFillHandbagFill />
             </motion.span>
-            <span className="absolute bg-gold p-1 top-2 right-0 rounded-full py-0 px-1.5 text-sm select-none">
+            <span className="absolute bg-gold p-1 top-3 right-1 rounded-full py-0 px-1.5 text-sm select-none">
               {amount === 0 ? undefined : amount}
             </span>
           </li>
@@ -131,7 +131,7 @@ const NavBar = ({ amount }) => {
             type: "spring",
             bounce: 0.6,
           }}
-          className="fixed sm:hidden top-0 -left-10 z-50 text-charcoal w-[90vw] h-[100vh] bg-white"
+          className="fixed sm:hidden top-0 -left-10 z-50 text-charcoal w-[70%] h-[100vh] bg-white"
         >
           <span className="min-h-[10vh] border-b-[1px] border-secondary flex justify-end items-center pr-2">
             <span

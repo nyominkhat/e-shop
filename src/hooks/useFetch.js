@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 
 const API = "http://localhost:1337/api/products?populate=*";
 
-// const API = "https://e-shop-api-qnqq.onrender.com/api/products?populate=*";
-
 const useFetch = (query = "", method) => {
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = React.useState(true);
