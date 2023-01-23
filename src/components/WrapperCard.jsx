@@ -1,8 +1,11 @@
 import React from "react";
 
-const WrapperCard = ({ cover, title, decs }) => {
+const WrapperCard = ({ cover, title, decs, index }) => {
   return (
-    <section className="card lg:w-80 w-60 md:h-1/2 shadow-2xl bg-white p-3">
+    <section
+      id={index}
+      className="card lg:w-80 w-60 md:h-1/2 shadow-2xl bg-white p-3"
+    >
       <figure className="mx-auto p-4 rounded-full shadow-md bg-heather">
         {cover}
       </figure>

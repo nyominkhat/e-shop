@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { motion } from "framer-motion";
-import { Context } from "../App";
+import  {Context}  from "../App";
 import AddToCartItem from "./AddToCartItem";
 import { numberFormat } from "../utils";
 

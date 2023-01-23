@@ -4,7 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
 
 import { numberFormat } from "../utils";
-import { Context } from "../App";
+import  {Context}  from "../App";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ProductCard = ({ product, category, discont = "0", index }) => {

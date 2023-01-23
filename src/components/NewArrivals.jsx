@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import ProductCard from "./ProductCard";
 
@@ -46,9 +47,11 @@ const NewArrivals = () => {
           category={firstProduct.attributes.category.toUpperCase()}
         />
 
-        <button className="btn btn-outline btn-secondary text-charcoal">
-          See More
-        </button>
+        <Link to='/products'>
+          <button className="btn btn-outline btn-secondary text-charcoal">
+            See More
+          </button>
+        </Link>
       </div>
     </section>
   );

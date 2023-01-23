@@ -16,7 +16,7 @@ const Products = React.lazy(() => import("./pages/Products"));
 
 export const Context = createContext();
 
-function App() {
+export default function App() {
   const [quentity, setQuentity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [isShown, setIsShown] = useState(false);
@@ -111,4 +111,5 @@ function App() {
   );
 }
 
-export default App;
+
+

@@ -44,10 +44,10 @@ const ProductDetail = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ delay: 0.2, duration: 1, type: "spring", bounce: 0.6 }}
-        className="md:w-full lg:w-[90%] xl:w-4/5 md:h-[25rem]  bg-heather p-14 mx-auto shadow-2xl rounded-md md:flex hidden flex-wrap justify-between items-center relative"
+        className="md:w-full lg:w-[80%] xl:w-4/5 md:h-[30rem]  bg-heather p-14 mx-auto shadow-2xl rounded-md md:flex hidden justify-between items-center relative"
       >
-        <div className="overflow-hidden w-2/5 h-96 shadow-md bg-white rounded-sm p-[2px] absolute -top-14  border border-heather border-t-2">
-          <div className="hover:scale-110 h-full transition duration-200 ease-out">
+        <div className="overflow-hidden rounded-md w-2/5 h-[45vh] shadow-md bg-white  p-[2px] absolute -top-14  border border-heather border-t-2">
+          <div className="h-full transition duration-200 ease-out hover:scale-110">
             <LazyLoadImage
               effect="blur"
               src={url}
@@ -69,11 +69,11 @@ const ProductDetail = () => {
             style={{ transform: "translate(0%,-10%)" }}
             className="absolute right-0 w-1/2 top-[20%] p-1"
           >
-            <h2 className="font-bold text-2xl mb-4">{title}</h2>
+            <h2 className="mb-4 text-2xl font-bold">{title}</h2>
             <span className="text-lg font-bold text-gray">
               Ks {numberFormat(price)}.00
             </span>
-            <p className="flex text-sm mt-4 mb-4">{description}</p>
+            <p className="flex mt-4 mb-4 text-sm">{description}</p>
             <button
               onClick={() => handleAdd(sluggedProduct)}
               className="btn btn-outline btn-accent"
@@ -85,7 +85,7 @@ const ProductDetail = () => {
       </motion.div>
 
       {/* small device */}
-      <div className="md:hidden flex flex-col w-96 p-4">
+      <div className="flex flex-col p-4 md:hidden w-96">
         <LazyLoadImage
           effect="blur"
           src={url}
@@ -97,18 +97,18 @@ const ProductDetail = () => {
           className="object-cover w-full h-full"
         />
 
-        <div className="mt-2 p-2 ">
-          <h2 className="font-bold text-xl mb-2">{title}</h2>
+        <div className="p-2 mt-2 ">
+          <h2 className="mb-2 text-xl font-bold">{title}</h2>
           <span className="font-bold text-gray">Ks {price}.00</span>
           <p className="flex my-2 text-sm">{description}</p>
-          <div className="flex mt-4 items-center justify-between">
+          <div className="flex items-center justify-between mt-4">
             <button
               onClick={() => handleAdd(sluggedProduct)}
               className="btn btn-outline btn-accent"
             >
               Add To Cart
             </button>
-            <Link className="pr-4" to="/products">
+            <Link to="/products">
               <TiArrowBack size={25} />
             </Link>
           </div>

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 
-import { Context } from "../App";
+import  {Context}  from "../App";
 import Logo from "/images/logo.svg";
 
 let activeLink = {
@@ -127,7 +127,7 @@ const NavBar = ({ amount }) => {
           initial={{ x: -100 }}
           animate={{ x: 0 }}
           transition={{
-            duration: 1,
+            duration: 1.2,
             type: "spring",
             bounce: 0.6,
           }}

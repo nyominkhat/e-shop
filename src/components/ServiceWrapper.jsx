@@ -1,8 +1,19 @@
 import React from "react";
 import { FaShieldAlt, FaWallet, FaTruckMoving } from "react-icons/fa";
 import { GiVrHeadset } from "react-icons/gi";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import WrapperCard from "./WrapperCard";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const data = [
   {
@@ -29,17 +40,39 @@ const data = [
 
 const ServiceWrapper = () => {
   return (
-    <section className="flex justify-around flex-wrap gap-2">
-      {data.map((item, index) => (
-        // <span key={index}>{item.cover}</span>
-        <WrapperCard
-          key={index}
-          cover={item.cover}
-          title={item.title}
-          decs={item.decs}
-        />
-      ))}
-    </section>
+    <>
+      <section className="sm:flex hidden justify-around flex-wrap gap-2">
+        {data.map((item, index) => (
+          // <span key={index}>{item.cover}</span>
+          <WrapperCard
+            key={index}
+            cover={item.cover}
+            title={item.title}
+            decs={item.decs}
+          />
+        ))}
+      </section>
+
+      <section className="sm:hidden">
+        <Slider {...settings}>
+          {data.map((item, index) => (
+            // <span key={index}>{item.cover}</span>
+            <div key={index} className="flex">
+              <div className="mx-auto w-20">
+                <figure className="p-4 absolute top-0 rounded-full shadow-md bg-heather">
+                  {item.cover}
+                </figure>
+              </div>
+
+              <div className="card-body mt-12 text-center">
+                <h2 className="text-lg font-semibold">{item.title}</h2>
+                <p className="text-sm">{item.decs}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </section>
+    </>
   );
 };
 
