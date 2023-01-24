@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const API = "http://localhost:1337/api/products?populate=*";
+const API = `${import.meta.env.VITE_API_URL}/api/products?populate=*`;
+
+// console.log(import.meta.env.VITE_API);
 
 const useFetch = (query = "", method) => {
   const [response, setResponse] = useState(null);
