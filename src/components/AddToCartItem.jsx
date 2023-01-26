@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { GrClose } from "react-icons/gr";
+import { FaTrash } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import { numberFormat } from "../utils";
@@ -81,18 +81,19 @@ const AddToCartItem = React.memo(({ item, index }) => {
             +
           </button>
         </div>
-
-        <div
-          onClick={() => {
-            handleRemove(item.id);
-            setQuentity(quentity - amount);
-            setTotalPrice(totalPrice - price * amount);
-            localStorage.removeItem(title);
-          }}
-        >
-          <GrClose size={12} />
-        </div>
       </div>
+
+      <button
+        onClick={() => {
+          handleRemove(item.id);
+          setQuentity(quentity - amount);
+          setTotalPrice(totalPrice - price * amount);
+          localStorage.removeItem(title);
+        }}
+        className="border p-1.5 rounded-lg bg-charcoal"
+      >
+        <FaTrash color="white" size={12} />
+      </button>
     </motion.div>
   );
 });
