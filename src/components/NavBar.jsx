@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { BsFillHandbagFill, BsListNested } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 
-import  {Context}  from "../App";
+import { Context } from "../App";
 import Logo from "/images/logo.svg";
 
 let activeLink = {
@@ -121,63 +121,64 @@ const NavBar = ({ amount }) => {
           </li>
         </ul>
       </div>
-
-      {isOpen ? (
-        <motion.aside
-          initial={{ x: -100 }}
-          animate={{ x: 0 }}
-          transition={{
-            duration: 1.2,
-            type: "spring",
-            bounce: 0.6,
-          }}
-          className="fixed sm:hidden top-0 -left-10 z-50 text-charcoal w-[70%] h-[100vh] bg-white"
-        >
-          <span className="min-h-[10vh] border-b-[1px] border-secondary flex justify-end items-center pr-2">
-            <span
-              className="p-4 border rounded-full cursor-pointer border-secondary"
-              onClick={() => setIsOpen(false)}
-            >
-              <AiOutlineClose />
+      <AnimatePresence>
+        {isOpen ? (
+          <motion.aside
+            initial={{ x: -100 }}
+            animate={{ x: 0 }}
+            transition={{
+              duration: 0.3,
+              type: "tween",
+            }}
+            exit={{ x: "-100%" }}
+            className="fixed sm:hidden top-0 -left-10 z-50 text-charcoal w-[70%] h-[100vh] bg-white"
+          >
+            <span className="min-h-[10vh] border-b-[1px] border-secondary flex justify-end items-center pr-2">
+              <span
+                className="p-4 border rounded-full cursor-pointer border-secondary"
+                onClick={() => setIsOpen(false)}
+              >
+                <AiOutlineClose />
+              </span>
             </span>
-          </span>
 
-          <ul className="flex flex-col gap-6 p-4 pl-20">
-            <li onClick={() => setIsOpen(false)}>
-              <NavLink
-                to="/"
-                style={({ isActive }) => (isActive ? activeLink : null)}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-              <NavLink
-                style={({ isActive }) => (isActive ? activeLink : null)}
-                to="/products"
-              >
-                Products
-              </NavLink>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-              <NavLink
-                to="/about"
-                style={({ isActive }) => (isActive ? activeLink : null)}
-              >
-                About Us
-              </NavLink>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-              <NavLink
-                to="/contactus"
-                style={({ isActive }) => (isActive ? activeLink : null)}
-              >
-                Contact Us
-              </NavLink>
-            </li>
-          </ul>
-        </motion.aside>
-      ) : null}
+            <ul className="flex flex-col gap-6 p-4 pl-20">
+              <li onClick={() => setIsOpen(false)}>
+                <NavLink
+                  to="/"
+                  style={({ isActive }) => (isActive ? activeLink : null)}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li onClick={() => setIsOpen(false)}>
+                <NavLink
+                  style={({ isActive }) => (isActive ? activeLink : null)}
+                  to="/products"
+                >
+                  Products
+                </NavLink>
+              </li>
+              <li onClick={() => setIsOpen(false)}>
+                <NavLink
+                  to="/about"
+                  style={({ isActive }) => (isActive ? activeLink : null)}
+                >
+                  About Us
+                </NavLink>
+              </li>
+              <li onClick={() => setIsOpen(false)}>
+                <NavLink
+                  to="/contactus"
+                  style={({ isActive }) => (isActive ? activeLink : null)}
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+            </ul>
+          </motion.aside>
+        ) : null}
+      </AnimatePresence>
     </nav>
   );
 };

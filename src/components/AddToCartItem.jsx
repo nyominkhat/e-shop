@@ -30,10 +30,14 @@ const AddToCartItem = React.memo(({ item, index }) => {
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
-        duration: 0.5,
         delay: 0.09 * index,
-        type: "spring",
-        bounce: 0.4,
+        type: "tween",
+      }}
+      exit={{
+        opacity: 0,
+        transition: {
+          duration: 0.1,
+        },
       }}
       className="flex items-center justify-between p-2 px-4 my-2 rounded-md bg-heather"
     >

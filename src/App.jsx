@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createContext } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import NavBar from "./components/NavBar";
 import Loading from "./components/Loading";
@@ -91,7 +91,8 @@ export default function App() {
           <NavBar amount={quentity} />
           {isAdded ? <Warnning /> : null}
           {/* <Warnning /> */}
-          {isShown ? <ShoppingCard /> : null}
+
+          <AnimatePresence>{isShown ? <ShoppingCard /> : null}</AnimatePresence>
 
           <React.Suspense fallback={<Loading />}>
             <Routes>
@@ -110,6 +111,3 @@ export default function App() {
     </Context.Provider>
   );
 }
-
-
-
