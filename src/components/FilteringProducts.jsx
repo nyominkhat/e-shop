@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 import useFilteringProducts from "../hooks/useFilteringProducts";
 
 const FilteringProducts = ({ category }) => {
-  const { response, loading } = useFilteringProducts(`${category}`);
+  const { response, loading } = useFilteringProducts(category);
 
   if (loading)
     return (
