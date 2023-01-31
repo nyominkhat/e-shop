@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Footer from "../components/Footer";
+
 
 const Contactus = () => {
   return (
@@ -65,9 +65,7 @@ const Contactus = () => {
         </div> 
       </div>
 
-      <div className="mt-40 ">
-        <Footer />
-      </div>
+   
     </motion.div>
   );
 };

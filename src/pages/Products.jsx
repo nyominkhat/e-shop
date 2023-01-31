@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollTag } from "react-scroll";
 import FilteringProducts from "../components/FilteringProducts";
-import Footer from "../components/Footer";
 
 const Products = () => {
   return (
@@ -139,16 +138,12 @@ const Products = () => {
 
       <hr className="w-4/5 mx-auto my-10 text-white border shadow-md" />
 
-      <div id="bag" className="mb-10">
+      <div id="bag">
         <h2 className="mt-5 mb-10 text-2xl font-bold text-center lg:text-5xl md:text-4xl sm:text-3xl lg:pl-10 lg:text-left">
           BAG
         </h2>
         <FilteringProducts category="bag" />
       </div>
-
-      <hr className="w-4/5 mx-auto my-10 text-white border shadow-md" />
-
-      <Footer />
     </motion.div>
   );
 };

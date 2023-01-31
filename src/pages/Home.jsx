@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import Categories from "../components/Categories";
-import Footer from "../components/Footer";
 
 import Hero from "../components/Hero";
 import NewArrivals from "../components/NewArrivals";
@@ -34,10 +33,6 @@ const Home = () => {
       <hr className="w-4/5 mx-auto my-10 border shadow-md text-heather" />
 
       <ServiceWrapper />
-
-      <hr className="w-4/5 mx-auto my-10 border shadow-md text-heather" />
-
-      <Footer />
     </motion.div>
   );
 };

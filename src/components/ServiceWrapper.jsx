@@ -41,7 +41,7 @@ const data = [
 const ServiceWrapper = () => {
   return (
     <>
-      <section className="flex-wrap justify-around hidden gap-2 sm:flex">
+      <section className="flex-wrap justify-around hidden gap-2 sm:flex mb-5">
         {data.map((item, index) => (
           // <span key={index}>{item.cover}</span>
           <WrapperCard
@@ -53,7 +53,7 @@ const ServiceWrapper = () => {
         ))}
       </section>
 
-      <section className="sm:hidden">
+      <section className="sm:hidden mb-5">
         <Slider {...settings}>
           {data.map((item, index) => (
             // <span key={index}>{item.cover}</span>

@@ -13,6 +13,7 @@ const ProductDetail = React.lazy(() => import("./components/ProductDetail"));
 const About = React.lazy(() => import("./pages/About"));
 const Contactus = React.lazy(() => import("./pages/Contactus"));
 const Products = React.lazy(() => import("./pages/Products"));
+const Footer = React.lazy(() => import("./components/Footer"));
 
 export const Context = createContext();
 
@@ -107,6 +108,12 @@ export default function App() {
             </Routes>
           </React.Suspense>
         </Router>
+
+        <span className="py-10 bg-primary flex">
+          <hr className="text-white w-4/5 mx-auto  border shadow-md" />
+        </span>
+
+        <Footer />
       </motion.div>
     </Context.Provider>
   );
