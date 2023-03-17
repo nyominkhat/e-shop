@@ -17,6 +17,6 @@
 - react-slick
 - slick-carousel
 
-### Animation 
+### Animation with
 
 - framer-motion
