@@ -21,6 +21,10 @@ const Categories = () => {
               height="100%"
               className="object-cover w-full h-full bg-heather "
             />
+            {/* <img
+              src="./images/category-imgs/watch.jpg"
+              className="object-cover w-full h-full bg-heather "
+            /> */}
             {/* transform: translate(-50%,-50%); */}
             <button
               style={{ transform: "translate(-50%,-50%)" }}
@@ -41,6 +45,10 @@ const Categories = () => {
               loading="lazy"
               className="object-cover w-full h-full"
             />
+            {/* <img
+              src="./images/category-imgs/loosetee.jpg"
+              className="object-cover w-full h-full"
+            /> */}
             <button
               style={{ transform: "translate(-50%,-50%)" }}
               className="absolute top-[50%] left-[50%] text-secondary border border-secondary border-1 py-3 px-4 rounded-md hover:bg-tan hover:text-charcoal font-semibold transition duration-200 ease-out 
@@ -62,6 +70,10 @@ const Categories = () => {
               loading="lazy"
               className="object-cover w-full h-full"
             />
+            {/* <img
+              src="./images/category-imgs/polotee.jpg"
+              className="object-cover w-full h-full"
+            /> */}
             <button
               style={{ transform: "translate(-50%,-50%)" }}
               className="absolute top-[50%] left-[50%] text-secondary border border-secondary border-1 py-3 px-4 rounded-md hover:bg-tan hover:text-charcoal font-semibold transition duration-200 ease-out  "
@@ -81,6 +93,10 @@ const Categories = () => {
               loading="lazy"
               className="object-cover w-full h-full"
             />
+            {/* <img
+              src="./images/category-imgs/shirt.jpg"
+              className="object-cover w-full h-full"
+            /> */}
             <button
               style={{ transform: "translate(-50%,-50%)" }}
               className="absolute top-[50%] left-[50%] text-secondary border border-secondary border-1 py-3 px-4 rounded-md hover:bg-tan hover:text-charcoal font-semibold transition duration-200 ease-out  "
@@ -100,6 +116,10 @@ const Categories = () => {
               loading="lazy"
               className="object-cover w-full h-full"
             />
+            {/* <img
+              src="./images/category-imgs/sneaker.jpg"
+              className="object-cover w-full h-full"
+            /> */}
             <button
               style={{ transform: "translate(-50%,-50%)" }}
               className="absolute top-[50%] left-[50%] text-secondary border border-secondary border-1 py-3 px-4 rounded-md hover:bg-tan hover:text-charcoal font-semibold transition duration-200 ease-out  "
@@ -119,6 +139,10 @@ const Categories = () => {
               loading="lazy"
               className="object-cover w-full h-full"
             />
+            {/* <img
+              src="./images/category-imgs/bag.jpg"
+              className="object-cover w-full h-full"
+            /> */}
             <button
               style={{ transform: "translate(-50%,-50%)" }}
               className="absolute top-[50%] left-[50%] text-secondary border border-secondary border-1 py-3 px-4 rounded-md hover:bg-tan hover:text-charcoal font-semibold transition duration-200 ease-out "
@@ -134,65 +158,89 @@ const Categories = () => {
       <div className="md:hidden max-h-[80vh] flex gap-2 px-5">
         <div className="flex flex-col w-1/4 gap-2">
           <div className="transition duration-200 ease-out h-1/2 hover:opacity-80 hover:scale-105 bg-heather">
-            <LazyLoadImage
+            {/* <LazyLoadImage
               effect="blur"
               src="./images/category-imgs/watch.jpg "
               width="100%"
               height="100%"
               className="object-cover w-full h-full cursor-pointer "
+            /> */}
+            <img
+              src="./images/category-imgs/watch.jpg"
+              className="object-cover w-full h-full bg-heather "
             />
           </div>
 
           <div className="transition duration-200 ease-out h-1/2 hover:opacity-80 hover:scale-105 bg-heather">
-            <LazyLoadImage
+            {/* <LazyLoadImage
               effect="blur"
               src="./images/category-imgs/sneaker.jpg"
               width="100%"
               height="100%"
               loading="lazy"
               className="object-cover w-full h-full cursor-pointer"
+            /> */}
+            <img
+              src="./images/category-imgs/sneaker.jpg"
+              className="object-cover w-full h-full"
             />
           </div>
         </div>
 
         <div className="w-1/4 transition duration-200 ease-out hover:opacity-80 hover:scale-105 bg-heather">
-          <LazyLoadImage
+          {/* <LazyLoadImage
             effect="blur"
             src="./images/category-imgs/loosetee.jpg"
             width="100%"
             height="100%"
             className="object-cover w-full h-full cursor-pointer"
+          /> */}
+          <img
+            src="./images/category-imgs/loosetee.jpg"
+            className="object-cover w-full h-full"
           />
         </div>
 
         <div className="flex flex-col w-2/4 gap-2 ">
           <div className="flex gap-2 h-1/2">
             <div className="w-1/2 transition duration-200 ease-out hover:opacity-80 hover:scale-105 bg-heather">
-              <LazyLoadImage
+              {/* <LazyLoadImage
                 effect="blur"
                 src="./images/category-imgs/polotee.jpg"
                 width="100%"
                 height="100%"
                 className="object-cover w-full h-full cursor-pointer"
+              /> */}
+              <img
+                src="./images/category-imgs/polotee.jpg"
+                className="object-cover w-full h-full"
               />
             </div>
             <div className="w-1/2 transition duration-200 ease-out hover:opacity-80 hover:scale-105 bg-heather">
-              <LazyLoadImage
+              {/* <LazyLoadImage
                 effect="blur"
                 src="./images/category-imgs/shirt.jpg"
                 width="100%"
                 height="100%"
                 className="object-cover w-full h-full cursor-pointer"
+              /> */}
+              <img
+                src="./images/category-imgs/shirt.jpg"
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
           <div className="transition duration-200 ease-out h-1/2 hover:opacity-80 hover:scale-105 bg-heather">
-            <LazyLoadImage
+            {/* <LazyLoadImage
               effect="blur"
               src="./images/category-imgs/bag.jpg"
               width="100%"
               height="100%"
               className="object-cover w-full h-full cursor-pointer"
+            /> */}
+            <img
+              src="./images/category-imgs/bag.jpg"
+              className="object-cover w-full h-full"
             />
           </div>
         </div>
